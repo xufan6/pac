@@ -30,15 +30,18 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.douban.fm")) {return DEFAULT ;}
   if (shExpMatch(host,"douban.fm")) {return DEFAULT ;}
   if (shExpMatch(host,"dou.bz")) {return DEFAULT ;}
+  if (shExpMatch(host,"alphatown.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.tbcdn.cn")) {return DEFAULT ;}
   if (shExpMatch(host,"*.taobaocdn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.taobao.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"taobao.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.atpanel.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.tmall.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.juhuasuan.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.alipay.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.tanx.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.koubei.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.kbcdn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.dianping.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.chinaunix.net")) {return DEFAULT ;}
   if (shExpMatch(host,"*.youku.com")) {return DEFAULT ;}
@@ -102,6 +105,13 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.icson.com")) {return DEFAULT ;}
   if (isInNet(host, "122.224.0.0", "255.240.0.0")) {return DEFAULT ;}
   if (isInNet(host, "122.240.0.0", "255.248.0.0")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.cmbchina.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.unionpay.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.chinapay.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.unionpaysecure.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"unionpaysecure.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.chinaunionpay.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.foodmate.net")) {return DEFAULT ;}
 
   if (shExpMatch(host,"*.zjut.com")) {return MYZJUT ;}
   if (shExpMatch(host,"zjut.com")) {return MYZJUT ;}
