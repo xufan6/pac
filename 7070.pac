@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-  var PROXY = "SOCKS5 127.0.0.1:8989";
+  var PROXY = "SOCKS5 127.0.0.1:7070";
   var DEFAULT = "DIRECT";
   var MYZJUT = "DIRECT";
 
