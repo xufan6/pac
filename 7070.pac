@@ -3,6 +3,44 @@ function FindProxyForURL(url, host) {
   var DEFAULT = "DIRECT";
   var MYZJUT = "DIRECT";
 
+  if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "10.0.0.0", "255.0.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "172.16.0.0", "255.240.0.0")) {return DEFAULT ;}
+  if ( host == "localhost" || host == "127.0.0.1" ) {return DEFAULT ;}
+
+  if (shExpMatch(host,"*.zjut.com")) {return MYZJUT ;}
+  if (shExpMatch(host,"zjut.com")) {return MYZJUT ;}
+  if (shExpMatch(host,"*.zjut.edu.cn")) {return MYZJUT ;}
+  if (shExpMatch(host,"*.myzjut.org")) {return MYZJUT ;}
+  if (shExpMatch(host,"myzjut.org")) {return MYZJUT ;}
+  if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return MYZJUT ;}
+
+  if (shExpMatch(host,"*.tbcdn.cn")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.taobaocdn.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.taobao.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"taobao.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.atpanel.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.tmall.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.juhuasuan.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alipay.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.tanx.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.koubei.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.kbcdn.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.aliway.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.taobao.org")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.taobao.net")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.ali.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alibaba.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alimama.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alibaba-inc.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alipay-inc.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.aliyun-inc.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alibabacorp.com")) {return DEFAULT ;}
+  if (isInNet(host, "121.0.16.0", "255.255.240.0")) {return DEFAULT ;}
+  if (isInNet(host, "110.75.0.0", "255.255.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "110.76.0.0", "255.255.224.0")) {return DEFAULT ;}
+  if (isInNet(host, "115.127.16.0", "255.255.240.0")) {return DEFAULT ;}
+
   if (shExpMatch(host,"*.ssssp.net")) {return DEFAULT ;}
   if (shExpMatch(host,"ssssp.net")) {return DEFAULT ;}
   if (shExpMatch(host,"*.xufan6.com")) {return DEFAULT ;}
@@ -31,17 +69,6 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"douban.fm")) {return DEFAULT ;}
   if (shExpMatch(host,"dou.bz")) {return DEFAULT ;}
   if (shExpMatch(host,"alphatown.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tbcdn.cn")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobaocdn.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobao.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"taobao.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.atpanel.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tmall.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.juhuasuan.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alipay.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tanx.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.koubei.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.kbcdn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.dianping.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.chinaunix.net")) {return DEFAULT ;}
   if (shExpMatch(host,"*.youku.com")) {return DEFAULT ;}
@@ -116,33 +143,6 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.qunar.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.csair.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.putclub.com")) {return DEFAULT ;}
-
-  if (shExpMatch(host,"*.zjut.com")) {return MYZJUT ;}
-  if (shExpMatch(host,"zjut.com")) {return MYZJUT ;}
-  if (shExpMatch(host,"*.zjut.edu.cn")) {return MYZJUT ;}
-  if (shExpMatch(host,"*.myzjut.org")) {return MYZJUT ;}
-  if (shExpMatch(host,"myzjut.org")) {return MYZJUT ;}
-  if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return MYZJUT ;}
-
-  if (shExpMatch(host,"*.aliway.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobao.org")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobao.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ali.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alibaba.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alimama.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alibaba-inc.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alipay-inc.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.aliyun-inc.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alibabacorp.com")) {return DEFAULT ;}
-  if (isInNet(host, "121.0.16.0", "255.255.240.0")) {return DEFAULT ;}
-  if (isInNet(host, "110.75.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "110.76.0.0", "255.255.224.0")) {return DEFAULT ;}
-  if (isInNet(host, "115.127.16.0", "255.255.240.0")) {return DEFAULT ;}
-
-  if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "10.0.0.0", "255.0.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "172.16.0.0", "255.240.0.0")) {return DEFAULT ;}
-  if ( host == "localhost" || host == "127.0.0.1" ) {return DEFAULT ;}
 
   return PROXY ;
 }
