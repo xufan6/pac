@@ -1,6 +1,10 @@
 var PROXY = "SOCKS5 127.0.0.1:7070";
 var DEFAULT = "DIRECT";
 var cnIpAddressCidrList = [
+"127/8",
+"10/8",
+"172.16/12",
+"192.168/16",
 "1.0.1/24",
 "1.0.2/23",
 "1.0.8/21",
