@@ -124,6 +124,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.sohu.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.tanx.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.vancl.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.vanclimg.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.quwan.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.qiyi.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.qiyipic.com")) {return DEFAULT ;}
