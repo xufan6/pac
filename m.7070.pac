@@ -2,7 +2,7 @@ for(var PROXY = "SOCKS5 127.0.0.1:7070", DEFAULT = "DIRECT", cnIpAddressCidrList
 blocks = [], prefixes = [], prefixesDic = {}, i = 0, n = cnIpAddressCidrList.length;i < n;i++) {
   var cidr = cnIpAddressCidrList[i], last = cidr.split("/"), prefix = last[1], sections = last[0].split("."), block = (+sections[0] << 24) + (+sections[1] << 16) + (+sections[2] << 8) + (+sections[3] << 0);
   blocks.push(block);
-  prefixesDic[prefix] || (prefixesDic[prefix] = !0)
+  prefixesDic[prefix] || (prefixesDic[prefix] = true)
 }
 for(var k in prefixesDic) {
   prefixes.push(k)
@@ -30,10 +30,10 @@ function binarySearch(a, b) {
 function rangeLoopTest(a) {
   for(var a = a.split("."), a = (+a[0] << 24) + (+a[1] << 16) + (+a[2] << 8) + +a[3], b = 0;b < prefixes.length;b++) {
     if(binarySearch(blocks, a & -1 << 32 - prefixes[b]) > -1) {
-      return!0
+      return true
     }
   }
-  return!1
+  return false
 }
 function FindProxyForURL(a, b) {
   var c = dnsResolve(b);
