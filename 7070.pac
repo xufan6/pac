@@ -55,6 +55,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"renren.com")) {return DEFAULT ;}
   if (shExpMatch(host,"qq.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.qq.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.qqmail.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.qstatic.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.gtimg.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.paipai.com")) {return DEFAULT ;}
