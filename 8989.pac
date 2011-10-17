@@ -146,6 +146,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.csair.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.putclub.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.cnki.net")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.images-amazon.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
