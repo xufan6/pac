@@ -148,6 +148,8 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.cnki.net")) {return DEFAULT ;}
   if (shExpMatch(host,"*.images-amazon.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.zjks.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"huaban.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"img.hb.aicdn.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
