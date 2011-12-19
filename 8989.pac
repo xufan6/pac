@@ -14,6 +14,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.myzjut.org")) {return MYZJUT ;}
   if (shExpMatch(host,"myzjut.org")) {return MYZJUT ;}
   if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return MYZJUT ;}
+  if (shExpMatch(host,"*.zjut.in")) {return MYZJUT ;}
 
   if (shExpMatch(host,"*.tbcdn.cn")) {return DEFAULT ;}
   if (shExpMatch(host,"*.taobaocdn.com")) {return DEFAULT ;}
