@@ -153,6 +153,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"huaban.com")) {return DEFAULT ;}
   if (shExpMatch(host,"img.hb.aicdn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"yyets.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.hzqx.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
