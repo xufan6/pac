@@ -24,6 +24,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.tmall.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.juhuasuan.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.alipay.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alipayobjects.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.tanx.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.koubei.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.kbcdn.com")) {return DEFAULT ;}
