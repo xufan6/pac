@@ -62,6 +62,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.qstatic.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.gtimg.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.paipai.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.soso.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.sinaapp.com")) {return DEFAULT ;}
   if (shExpMatch(host,"sina.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.sina.com")) {return DEFAULT ;}
