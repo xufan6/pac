@@ -161,6 +161,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.docin.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.dbank.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.koolearn.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.duxiu.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
