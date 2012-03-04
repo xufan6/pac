@@ -19,6 +19,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.tbcdn.cn")) {return DEFAULT ;}
   if (shExpMatch(host,"*.taobaocdn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.taobao.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.*.taobao.com")) {return DEFAULT ;}
   if (shExpMatch(host,"taobao.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.atpanel.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.tmall.com")) {return DEFAULT ;}
@@ -33,6 +34,8 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.taobao.net")) {return DEFAULT ;}
   if (shExpMatch(host,"*.ali.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.alibaba.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.china.alibaba.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.aliimg.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.alimama.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.alibaba-inc.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.alipay-inc.com")) {return DEFAULT ;}
@@ -58,6 +61,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"renren.com")) {return DEFAULT ;}
   if (shExpMatch(host,"qq.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.qq.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.*.qq.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.qqmail.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.qstatic.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.gtimg.com")) {return DEFAULT ;}
@@ -162,6 +166,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.dbank.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.koolearn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.duxiu.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.cnzz.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
