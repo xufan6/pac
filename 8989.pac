@@ -167,6 +167,8 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.koolearn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.duxiu.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.cnzz.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.hzrc.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.hzbys.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
