@@ -169,6 +169,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.cnzz.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.hzrc.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.hzbys.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"58.68.130.147")) {return DEFAULT ;}
 
   return PROXY ;
 }
