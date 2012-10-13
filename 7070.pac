@@ -175,6 +175,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.10010.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.kuukie.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.weiphone.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.networkbench.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
