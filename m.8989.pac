@@ -28,7 +28,9 @@ function binarySearch(a, b) {
   return-1
 }
 function rangeLoopTest(a) {
-  for(var a = a.split("."), a = (+a[0] << 24) + (+a[1] << 16) + (+a[2] << 8) + +a[3], b = 0;b < prefixes.length;b++) {
+  a = a.split(".");
+  a = (+a[0] << 24) + (+a[1] << 16) + (+a[2] << 8) + +a[3];
+  for(var b = 0;b < prefixes.length;b++) {
     if(-1 < binarySearch(blocks, a & -1 << 32 - prefixes[b])) {
       return!0
     }
