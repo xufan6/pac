@@ -159,6 +159,8 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"huaban.com")) {return DEFAULT ;}
   if (shExpMatch(host,"img.hb.aicdn.com")) {return DEFAULT ;}
   if (shExpMatch(host,"yyets.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.yyets.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.yyets.net")) {return DEFAULT ;}
   if (shExpMatch(host,"*.hzqx.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.hzti.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.oschina.com")) {return DEFAULT ;}
