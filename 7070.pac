@@ -41,6 +41,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.alipay-inc.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.aliyun-inc.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.aliyun.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.alisoft.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.alibabacorp.com")) {return DEFAULT ;}
   if (isInNet(host, "121.0.16.0", "255.255.240.0")) {return DEFAULT ;}
   if (isInNet(host, "110.75.0.0", "255.255.0.0")) {return DEFAULT ;}
