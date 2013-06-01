@@ -183,6 +183,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.yihaodian.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.yihaodianimg.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.5any.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.qyer.com")) {return DEFAULT ;}
 
   return PROXY ;
 }
