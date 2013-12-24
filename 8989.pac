@@ -47,6 +47,9 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "110.75.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "110.76.0.0", "255.255.224.0")) {return DEFAULT ;}
   if (isInNet(host, "115.127.16.0", "255.255.240.0")) {return DEFAULT ;}
+  if (isInNet(host, "42.156.128.0", "255.255.128.0")) {return DEFAULT ;}
+  if (isInNet(host, "42.120.0.0", "255.255.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "42.121.0.0", "255.255.0.0")) {return DEFAULT ;}
 
   if (shExpMatch(host,"*.ssssp.net")) {return DEFAULT ;}
   if (shExpMatch(host,"ssssp.net")) {return DEFAULT ;}
