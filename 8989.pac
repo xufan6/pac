@@ -183,6 +183,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.kuukie.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.weiphone.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.networkbench.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.yhd.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.yihaodian.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.yihaodianimg.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.5any.com")) {return DEFAULT ;}
