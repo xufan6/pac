@@ -123,6 +123,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(host,"*.dospy.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.hzti.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.nuomi.com")) {return DEFAULT ;}
+  if (shExpMatch(host,"*.meituan.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.163.com")) {return DEFAULT ;}
   if (shExpMatch(host,"*.126.net")) {return DEFAULT ;}
   if (shExpMatch(host,"*.netease.com")) {return DEFAULT ;}
