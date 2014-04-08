@@ -6,43 +6,8 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "10.0.0.0", "255.0.0.0")) {return DEFAULT ;}
   if (isInNet(host, "172.16.0.0", "255.240.0.0")) {return DEFAULT ;}
-  if ( host == "localhost" || host == "127.0.0.1" ) {return DEFAULT ;}
-
-  if (shExpMatch(host,"*.zjut.com")) {return MYZJUT ;}
-  if (shExpMatch(host,"zjut.com")) {return MYZJUT ;}
-  if (shExpMatch(host,"*.zjut.edu.cn")) {return MYZJUT ;}
-  if (shExpMatch(host,"*.myzjut.org")) {return MYZJUT ;}
-  if (shExpMatch(host,"myzjut.org")) {return MYZJUT ;}
+  if (isPlainHostName(host) || (host == "localhost") || (host == "127.0.0.1") ) {return DEFAULT ;}
   if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return MYZJUT ;}
-  if (shExpMatch(host,"*.zjut.in")) {return MYZJUT ;}
-
-  if (shExpMatch(host,"*.tbcdn.cn")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobaocdn.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobao.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.*.taobao.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"taobao.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.atpanel.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tmall.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.juhuasuan.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alipay.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alipayobjects.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tanx.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.koubei.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.kbcdn.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.aliway.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobao.org")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.taobao.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ali.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alibaba.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.china.alibaba.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.aliimg.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alimama.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alibaba-inc.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alipay-inc.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.aliyun-inc.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.aliyun.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alisoft.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.alibabacorp.com")) {return DEFAULT ;}
   if (isInNet(host, "121.0.16.0", "255.255.240.0")) {return DEFAULT ;}
   if (isInNet(host, "110.75.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "110.76.0.0", "255.255.224.0")) {return DEFAULT ;}
@@ -51,144 +16,411 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "42.120.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "42.121.0.0", "255.255.0.0")) {return DEFAULT ;}
 
-  if (shExpMatch(host,"*.ssssp.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"ssssp.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.xufan6.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"xufan6.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.crhan.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"crhan.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.cn")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.renren.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.xnimg.cn")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.xnpic.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.rrimg.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"renren.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"qq.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.qq.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.*.qq.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.qqmail.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.qstatic.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.gtimg.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.paipai.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.soso.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.wechat.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.sinaapp.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"sina.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.sina.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.sina.com.cn")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.sinaimg.cn")) {return DEFAULT ;}
-  if (shExpMatch(host,"douban.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.douban.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.douban.fm")) {return DEFAULT ;}
-  if (shExpMatch(host,"douban.fm")) {return DEFAULT ;}
-  if (shExpMatch(host,"dou.bz")) {return DEFAULT ;}
-  if (shExpMatch(host,"alphatown.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.dianping.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.chinaunix.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.youku.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ykimg.com")) {return DEFAULT ;}
   if (isInNet(host, "114.80.184.0", "255.255.255.0")) {return DEFAULT ;}
   if (isInNet(host, "202.102.0.0", "255.255.128.0")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ku6.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ku6cdn.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ku6img.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tudou.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tdimg.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tudouui.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"guao.cc")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.guao.hk")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.google.cn")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.baidu.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.360buy.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.360buyimg.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.google-analytics.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.xunlei.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.jiankongbao.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.lvping.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ctrip.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.hudong.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.cn99.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.52blackberry.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.chinamobile.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.zjyha.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.yhachina.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"weibo.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.weibo.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.56.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.xiami.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.maxpda.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.115.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.115cdn.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.115img.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.dospy.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.hzti.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.nuomi.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.meituan.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.163.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.126.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.netease.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.8264.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.cqvip.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.miui.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tuitui.info")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ip138.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.cnbeta.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.chinaunix.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.unixbeta.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.sogou.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.sohu.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.tanx.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.vancl.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.vanclimg.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.quwan.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.qiyi.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.qiyipic.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.verycd.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.pptv.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.icson.com")) {return DEFAULT ;}
   if (isInNet(host, "122.224.0.0", "255.240.0.0")) {return DEFAULT ;}
   if (isInNet(host, "122.240.0.0", "255.248.0.0")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.cmbchina.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.unionpay.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.chinapay.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.unionpaysecure.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"unionpaysecure.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.chinaunionpay.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.foodmate.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ct10000.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.qunar.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.csair.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.putclub.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.cnki.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.images-amazon.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.zjks.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"huaban.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"img.hb.aicdn.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"yyets.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.yyets.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.yyets.net")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.hzqx.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.hzti.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.oschina.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.docin.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.dbank.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.koolearn.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.duxiu.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.cnzz.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.hzrc.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.hzbys.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"58.68.130.147")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.mayi.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.ganji.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.10010.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.kuukie.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.weiphone.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.networkbench.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.yhd.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.yihaodian.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.yihaodianimg.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.5any.com")) {return DEFAULT ;}
-  if (shExpMatch(host,"*.qyer.com")) {return DEFAULT ;}
+
+  var safeDomains = [
+"zjut.com",
+"zjut.edu.cn",
+"myzjut.org",
+"zjut.in",
+"tbcdn.cn",
+"taobaocdn.com",
+"taobao.com",
+"atpanel.com",
+"tmall.com",
+"juhuasuan.com",
+"alipay.com",
+"alipayobjects.com",
+"tanx.com",
+"koubei.com",
+"kbcdn.com",
+"aliway.com",
+"taobao.org",
+"taobao.net",
+"ali.com",
+"alibaba.com",
+"aliimg.com",
+"alimama.com",
+"alibaba-inc.com",
+"alipay-inc.com",
+"aliyun-inc.com",
+"aliyun.com",
+"alisoft.com",
+"alibabacorp.com",
+"ssssp.net",
+"xufan6.com",
+"crhan.com",
+
+"10010.com",
+"115.com",
+"115cdn.com",
+"115img.com",
+"123u.com",
+"126.com",
+"126.net",
+"163.com",
+"17173.com",
+"178.com",
+"17cdn.com",
+"21cn.com",
+"360buy.com",
+"360buyimg.com",
+"360doc.com",
+"360safe.com",
+"36kr.com",
+"400gb.com",
+"4399.com",
+"51.la",
+"51buy.com",
+"51cto.com",
+"51job.com",
+"51jobcdn.com",
+"52blackberry.com",
+"56.com",
+"58.68.130.147",
+"5any.com",
+"5d6d.com",
+"5d6d.net",
+"61.com",
+"6rooms.com",
+"7k7k.com",
+"8264.com",
+"91.com",
+"acfun.tv",
+"ali213.net",
+"alibaba.com",
+"alicdn.com",
+"aliexpress.com",
+"aliimg.com",
+"alikunlun.com",
+"alimama.com",
+"alipay.com",
+"alipayobjects.com",
+"alisoft.com",
+"aliyun.com",
+"aliyuncdn.com",
+"aliyuncs.com",
+"alphatown.com",
+"anzhi.com",
+"appinn.com",
+"apple.com",
+"appsina.com",
+"archlinuxcn.org",
+"atpanel.com",
+"baidu.com",
+"baidupcs.com",
+"baihe.com",
+"baixing.com",
+"bdimg.com",
+"bdstatic.com",
+"bilibili.tv",
+"blogbus.com",
+"blueidea.com",
+"ccb.com",
+"cctv.com",
+"cctvpic.com",
+"cdn20.com",
+"china.com",
+"chinabyte.com",
+"chinacache.com",
+"chinacache.net",
+"chinamobile.com",
+"chinanews.com",
+"chinapay.com",
+"chinaren.com",
+"chinaunionpay.com",
+"chinaunix.com",
+"chinaunix.net",
+"chinaz.com",
+"cmbchina.com",
+"cn",
+"cn.bing.com",
+"cn.debian.org",
+"cn99.com",
+"cnbeta.com",
+"cnblogs.com",
+"cnepub.com",
+"cnki.net",
+"cnzz.com",
+"comsenz.com",
+"cqvip.com",
+"csair.com",
+"csdn.net",
+"ct10000.com",
+"ctdisk.com",
+"ctrip.com",
+"dangdang.com",
+"dbank.com",
+"dedecms.com",
+"diandian.com",
+"dianping.com",
+"discuz.com",
+"discuz.net",
+"dl.google.com",
+"docin.com",
+"donews.com",
+"dospy.com",
+"dou.bz",
+"douban.com",
+"douban.fm",
+"duapp.com",
+"duba.net",
+"duomi.com",
+"duote.com",
+"duowan.com",
+"duxiu.com",
+"egou.com",
+"et8.org",
+"etao.com",
+"fantong.com",
+"fenzhi.com",
+"foodmate.net",
+"ganji.com",
+"gaopeng.com",
+"gfan.com",
+"google-analytics.com",
+"google.cn",
+"gtimg.com",
+"guao.cc",
+"guao.hk",
+"hao123.com",
+"hc360.com",
+"hdslb.com",
+"hiapk.com",
+"hichina.com",
+"hoopchina.com",
+"huaban.com",
+"huanqiu.com",
+"hudong.com",
+"huochepiao.com",
+"hupu.com",
+"hzbys.com",
+"hzqx.com",
+"hzrc.com",
+"hzti.com",
+"iask.com",
+"iciba.com",
+"icson.com",
+"idqqimg.com",
+"ifeng.com",
+"ifengimg.com",
+"ijinshan.com",
+"images-amazon.com",
+"img.hb.aicdn.com",
+"ip138.com",
+"iqiyi.com",
+"it168.com",
+"iteye.com",
+"jandan.net",
+"jd.com",
+"jiankongbao.com",
+"jiathis.com",
+"jiayuan.com",
+"jiepang.com",
+"jing.fm",
+"jstv.com",
+"jumei.com",
+"kaixin001.com",
+"kandian.com",
+"kandian.net",
+"kanimg.com",
+"kdnet.net",
+"koolearn.com",
+"koudai8.com",
+"ku6.com",
+"ku6cdn.com",
+"ku6img.com",
+"kuaidi100.com",
+"kugou.com",
+"kuukie.com",
+"lashou.com",
+"letao.com",
+"letv.com",
+"lietou.com",
+"linezing.com",
+"loli.mg",
+"loli.vg",
+"lvping.com",
+"lxdns.com",
+"mangocity.com",
+"mapbar.com",
+"maxpda.com",
+"mayi.com",
+"mediav.com",
+"meilishuo.com",
+"meituan.com",
+"meituan.net",
+"meizu.com",
+"microsoft.com",
+"miui.com",
+"mop.com",
+"mtime.com",
+"mydrivers.com",
+"mzstatic.com",
+"netease.com",
+"networkbench.com",
+"newsmth.net",
+"ngacn.cc",
+"nuomi.com",
+"okbuy.com",
+"optaim.com",
+"oschina.com",
+"oschina.net",
+"paipai.com",
+"pcbeta.com",
+"pchome.net",
+"pcpop.com",
+"pengyou.com",
+"phpwind.net",
+"pingan.com",
+"pool.ntp.org",
+"pplive.com",
+"ppstream.com",
+"pptv.com",
+"putclub.com",
+"qhimg.com",
+"qianlong.com",
+"qidian.com",
+"qingdaonews.com",
+"qiushibaike.com",
+"qiyi.com",
+"qiyipic.com",
+"qq.com",
+"qqmail.com",
+"qstatic.com",
+"qunar.com",
+"qunarzz.com",
+"quwan.com",
+"qvbuy.com",
+"qyer.com",
+"renren.com",
+"rrfmn.com",
+"rrimg.com",
+"sanguosha.com",
+"sdo.com",
+"sina.com",
+"sina.com.cn",
+"sinaapp.com",
+"sinaedge.com",
+"sinaimg.cn",
+"sinaimg.com",
+"sinajs.com",
+"skycn.com",
+"smzdm.com",
+"sogou.com",
+"sohu.com",
+"soku.com",
+"soso.com",
+"soufun.com",
+"soufunimg.com",
+"staticsdo.com",
+"steamcn.com",
+"suning.com",
+"szzfgjj.com",
+"tanx.com",
+"taobao.com",
+"taobaocdn.com",
+"tbcache.com",
+"tdimg.com",
+"tencent.com",
+"tenpay.com",
+"tgbus.com",
+"thawte.com",
+"tiancity.com",
+"tianyaui.com",
+"tiexue.net",
+"tmall.com",
+"tmcdn.net",
+"tom.com",
+"tomonline-inc.com",
+"tuan800.com",
+"tuan800.net",
+"tuanimg.com",
+"tudou.com",
+"tudouui.com",
+"tuitui.info",
+"tuniu.com",
+"u148.net",
+"u17.com",
+"ubuntu.com",
+"ucjoy.com",
+"uni-marketers.com",
+"unionpay.com",
+"unionpaysecure.com",
+"unixbeta.com",
+"uusee.com",
+"uuu9.com",
+"vancl.com",
+"vanclimg.com",
+"vcimg.com",
+"verycd.com",
+"wandoujia.com",
+"wdjimg.com",
+"wechat.com",
+"weibo.com",
+"weiphone.com",
+"weiyun.com",
+"west263.com",
+"wrating.com",
+"wumii.com",
+"xdcdn.net",
+"xiachufang.com",
+"xiami.com",
+"xiami.net",
+"xiaomi.com",
+"xiaonei.com",
+"xiazaiba.com",
+"xici.net",
+"xilu.com",
+"xinhuanet.com",
+"xinnet.com",
+"xlpan.com",
+"xn--fiqs8s",
+"xnimg.cn",
+"xnpic.com",
+"xungou.com",
+"xunlei.com",
+"ydstatic.com",
+"yesky.com",
+"yeyou.com",
+"yhachina.com",
+"yhd.com",
+"yihaodian.com",
+"yihaodianimg.com",
+"yingjiesheng.com",
+"yintai.com",
+"yinyuetai.com",
+"yiqifa.com",
+"yixun.com",
+"ykimg.com",
+"ynet.com",
+"youdao.com",
+"yougou.com",
+"youku.com",
+"yupoo.com",
+"yy.com",
+"yyets.com",
+"yyets.net",
+"zbjimg.com",
+"zhaopin.com",
+"zhi.hu",
+"zhihu.com",
+"zhimg.com",
+"zhubajie.com",
+"zjks.com",
+"zjyha.com",
+"zongheng.com"
+  ];
+
+  var strDomain = '.' + host;
+  for (var i in safeDomains) {
+    if (strDomain.indexOf('.' + safeDomains[i]) !== -1) { 
+      return DEFAULT;
+    }
+  }
 
   return PROXY ;
 }
