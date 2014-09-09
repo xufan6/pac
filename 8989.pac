@@ -6,15 +6,55 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "10.0.0.0", "255.0.0.0")) {return DEFAULT ;}
   if (isInNet(host, "172.16.0.0", "255.240.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "100.64.0.0", "255.192.0.0")) {return DEFAULT ;}
   if (isPlainHostName(host) || (host == "localhost") || (host == "127.0.0.1") ) {return DEFAULT ;}
   if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return MYZJUT ;}
-  if (isInNet(host, "121.0.16.0", "255.255.240.0")) {return DEFAULT ;}
+
+  if (isInNet(host, "42.120.0.0", "255.254.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "69.147.91.177", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "115.124.16.0", "255.255.252.0")) {return DEFAULT ;}
+  if (isInNet(host, "119.30.208.0", "255.255.240.0")) {return DEFAULT ;}
+  if (isInNet(host, "119.38.208.0", "255.255.240.0")) {return DEFAULT ;}
+  if (isInNet(host, "119.42.224.0", "255.255.240.0")) {return DEFAULT ;}
   if (isInNet(host, "110.75.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "110.76.0.0", "255.255.224.0")) {return DEFAULT ;}
-  if (isInNet(host, "115.127.16.0", "255.255.240.0")) {return DEFAULT ;}
-  if (isInNet(host, "42.156.128.0", "255.255.128.0")) {return DEFAULT ;}
-  if (isInNet(host, "42.120.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "42.121.0.0", "255.255.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "121.0.16.0", "255.255.240.0")) {return DEFAULT ;}
+  if (isInNet(host, "61.164.145.55", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "112.125.31.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "112.125.127.59", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "210.5.9.213", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "210.13.83.253", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "42.96.253.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "112.126.126.0", "255.255.254.0")) {return DEFAULT ;}
+  if (isInNet(host, "119.145.148.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "122.70.187.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "182.92.246.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "223.4.0.0", "255.254.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "205.204.0.0", "255.255.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "115.236.69.91", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "115.236.172.20", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "121.199.125.2", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "115.28.126.0", "255.255.255.240")) {return DEFAULT ;}
+  if (isInNet(host, "121.196.131.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "115.29.255.1", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "121.199.125.4", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "42.156.0.0", "255.255.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "112.124.136.0", "255.255.248.0")) {return DEFAULT ;}
+  if (isInNet(host, "115.29.1.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "115.28.122.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "210.83.232.130", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "210.83.232.132", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "112.124.132.0", "255.255.252.0")) {return DEFAULT ;}
+  if (isInNet(host, "121.15.208.130", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "182.92.17.0", "255.255.255.224")) {return DEFAULT ;}
+  if (isInNet(host, "115.28.122.160", "255.255.255.240")) {return DEFAULT ;}
+  if (isInNet(host, "140.205.73.37", "255.255.255.255")) {return DEFAULT ;}
+  if (isInNet(host, "140.205.169.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "140.205.137.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "140.205.141.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "140.205.139.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "140.205.161.0", "255.255.255.0")) {return DEFAULT ;}
+  if (isInNet(host, "140.205.0.0", "255.255.0.0")) {return DEFAULT ;}
 
   if (isInNet(host, "114.80.184.0", "255.255.255.0")) {return DEFAULT ;}
   if (isInNet(host, "202.102.0.0", "255.255.128.0")) {return DEFAULT ;}
