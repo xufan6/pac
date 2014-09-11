@@ -1,14 +1,13 @@
 function FindProxyForURL(url, host) {
   var PROXY = "SOCKS5 127.0.0.1:8989";
   var DEFAULT = "DIRECT";
-  var MYZJUT = "DIRECT";
 
   if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "10.0.0.0", "255.0.0.0")) {return DEFAULT ;}
   if (isInNet(host, "172.16.0.0", "255.240.0.0")) {return DEFAULT ;}
   if (isInNet(host, "100.64.0.0", "255.192.0.0")) {return DEFAULT ;}
   if (isPlainHostName(host) || (host == "localhost") || (host == "127.0.0.1") ) {return DEFAULT ;}
-  if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return MYZJUT ;}
+  if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return DEFAULT ;}
 
   if (isInNet(host, "42.120.0.0", "255.254.0.0")) {return DEFAULT ;}
   if (isInNet(host, "69.147.91.177", "255.255.255.255")) {return DEFAULT ;}
@@ -455,9 +454,11 @@ function FindProxyForURL(url, host) {
 "zongheng.com"
   ];
 
-  var strDomain = '.' + host;
+  function dnsDomainIs(host, pattern) {
+    return host.length >= pattern.length && (host === pattern || host.substring(host.length - pattern.length - 1) === '.' + pattern);
+  }
   for (var i in safeDomains) {
-    if (strDomain.indexOf('.' + safeDomains[i]) !== -1) { 
+    if ( dnsDomainIs( host, safeDomains[i] ) ){
       return DEFAULT;
     }
   }
