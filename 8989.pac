@@ -340,6 +340,7 @@ function FindProxyForURL(url, host) {
 "rrimg.com",
 "sanguosha.com",
 "sdo.com",
+"shanbay.com",
 "sina.com",
 "sina.com.cn",
 "sinaapp.com",
