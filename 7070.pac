@@ -205,6 +205,7 @@ function FindProxyForURL(url, host) {
 "dou.bz",
 "douban.com",
 "douban.fm",
+"dpfile.com",
 "duapp.com",
 "duba.net",
 "duomi.com",
