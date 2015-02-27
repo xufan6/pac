@@ -392,6 +392,7 @@ function FindProxyForURL(url, host) {
 "unionpay.com",
 "unionpaysecure.com",
 "unixbeta.com",
+"useso.com",
 "uusee.com",
 "uuu9.com",
 "vancl.com",
