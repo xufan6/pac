@@ -360,6 +360,7 @@ function FindProxyForURL(url, host) {
 "staticsdo.com",
 "steamcn.com",
 "suning.com",
+"swhz6.com",
 "szzfgjj.com",
 "tanx.com",
 "taobao.com",
