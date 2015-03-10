@@ -89,6 +89,7 @@ function FindProxyForURL(url, host) {
 "aliyun.com",
 "alisoft.com",
 "alibabacorp.com",
+"amap.com",
 "ssssp.net",
 "xufan6.com",
 "crhan.com",
