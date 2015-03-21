@@ -268,6 +268,7 @@ function FindProxyForURL(url, host) {
 "kandian.com",
 "kandian.net",
 "kanimg.com",
+"kankan.com",
 "kdnet.net",
 "koolearn.com",
 "koudai8.com",
