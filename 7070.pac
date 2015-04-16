@@ -288,6 +288,7 @@ function FindProxyForURL(url, host) {
 "lvping.com",
 "lxdns.com",
 "mangocity.com",
+"mafengwo.net",
 "mapbar.com",
 "maxpda.com",
 "mayi.com",
