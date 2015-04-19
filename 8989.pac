@@ -221,6 +221,8 @@ function FindProxyForURL(url, host) {
 "etao.com",
 "fantong.com",
 "fenzhi.com",
+"flyert.com",
+"flyertea.com",
 "foodmate.net",
 "ganji.com",
 "gaopeng.com",
