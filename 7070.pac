@@ -342,6 +342,7 @@ function FindProxyForURL(url, host) {
 "quwan.com",
 "qvbuy.com",
 "qyer.com",
+"qyerstatic.com",
 "renren.com",
 "rrfmn.com",
 "rrimg.com",
