@@ -151,6 +151,7 @@ function FindProxyForURL(url, host) {
 "atpanel.com",
 "baidu.com",
 "baidupcs.com",
+"baidustatic.com",
 "baihe.com",
 "baixing.com",
 "bdimg.com",
