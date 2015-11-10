@@ -455,6 +455,7 @@ function FindProxyForURL(url, host) {
 "yy.com",
 "yyets.com",
 "yyets.net",
+"zdmimg.com",
 "zbjimg.com",
 "zhaopin.com",
 "zhi.hu",
