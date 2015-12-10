@@ -5,6 +5,7 @@ function FindProxyForURL(url, host) {
   if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
   if (isInNet(host, "10.0.0.0", "255.0.0.0")) {return DEFAULT ;}
   if (isInNet(host, "11.0.0.0", "255.0.0.0")) {return DEFAULT ;}
+  if (isInNet(host, "30.0.0.0", "255.0.0.0")) {return DEFAULT ;}
   if (isInNet(host, "172.16.0.0", "255.240.0.0")) {return DEFAULT ;}
   if (isInNet(host, "100.64.0.0", "255.192.0.0")) {return DEFAULT ;}
   if (isPlainHostName(host) || (host == "localhost") || (host == "127.0.0.1") ) {return DEFAULT ;}
