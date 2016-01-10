@@ -91,6 +91,7 @@ function FindProxyForURL(url, host) {
 "ssssp.net",
 "xufan6.com",
 "crhan.com",
+"minyo.us",
 
 "10010.com",
 "115.com",
