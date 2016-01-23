@@ -468,6 +468,7 @@ function FindProxyForURL(url, host) {
 "zhihu.com",
 "zhimg.com",
 "zhubajie.com",
+"zj165.com",
 "zjks.com",
 "zjyha.com",
 "zongheng.com"
