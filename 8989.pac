@@ -240,6 +240,7 @@ function FindProxyForURL(url, host) {
 "hiapk.com",
 "hichina.com",
 "hiwifi.com",
+"histatic.com",
 "hoopchina.com",
 "huaban.com",
 "huanqiu.com",
