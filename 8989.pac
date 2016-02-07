@@ -131,6 +131,7 @@ function FindProxyForURL(url, host) {
 "8264.com",
 "91.com",
 "acfun.tv",
+"aixifan.com",
 "ali213.net",
 "alibaba.com",
 "alicdn.com",
