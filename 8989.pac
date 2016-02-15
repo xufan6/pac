@@ -159,6 +159,7 @@ function FindProxyForURL(url, host) {
 "baixing.com",
 "bdimg.com",
 "bdstatic.com",
+"bilibili.com",
 "bilibili.tv",
 "blogbus.com",
 "blueidea.com",
