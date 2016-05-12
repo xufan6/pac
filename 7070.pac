@@ -363,6 +363,7 @@ function FindProxyForURL(url, host) {
 "sina.com",
 "sina.com.cn",
 "sinaapp.com",
+"sinacloud.com",
 "sinaedge.com",
 "sinaimg.cn",
 "sinaimg.com",
