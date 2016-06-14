@@ -164,6 +164,7 @@ function FindProxyForURL(url, host) {
 "bilibili.tv",
 "blogbus.com",
 "blueidea.com",
+"bonree.com",
 "bootcss.com",
 "ccb.com",
 "cctv.com",
