@@ -111,6 +111,7 @@ function FindProxyForURL(url, host) {
 "360doc.com",
 "360safe.com",
 "36kr.com",
+"3798.com",
 "4006695539.com",
 "400gb.com",
 "4399.com",
