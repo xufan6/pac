@@ -171,6 +171,7 @@ function FindProxyForURL(url, host) {
 "cctv.com",
 "cctvpic.com",
 "cdn20.com",
+"ceair.com",
 "china.com",
 "chinabyte.com",
 "chinacache.com",
