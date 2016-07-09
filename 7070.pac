@@ -226,6 +226,7 @@ function FindProxyForURL(url, host) {
 "duxiu.com",
 "ecitic.com",
 "egou.com",
+"elong.com",
 "et8.org",
 "etao.com",
 "fantong.com",
