@@ -254,6 +254,7 @@ function FindProxyForURL(url, host) {
 "hoopchina.com",
 "huaban.com",
 "huanqiu.com",
+"huawei.com",
 "hudong.com",
 "huochepiao.com",
 "hupu.com",
