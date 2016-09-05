@@ -466,6 +466,7 @@ function FindProxyForURL(url, host) {
 "yintai.com",
 "yinyuetai.com",
 "yiqifa.com",
+"yinxiang.com",
 "yixun.com",
 "ykimg.com",
 "ynet.com",
