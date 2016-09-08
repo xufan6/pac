@@ -191,6 +191,7 @@ function FindProxyForURL(url, host) {
 "cn.debian.org",
 "cn99.com",
 "cnbeta.com",
+"cnbetacdn.com",
 "cnblogs.com",
 "cnepub.com",
 "cnki.net",
