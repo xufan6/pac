@@ -308,6 +308,7 @@ function FindProxyForURL(url, host) {
 "linezing.com",
 "loli.mg",
 "loli.vg",
+"lvmama.com",
 "lvping.com",
 "lxdns.com",
 "mangocity.com",
