@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-  var PROXY = "SOCKS5 127.0.0.1:8989";
+  var PROXY = "SOCKS5 127.0.0.1:8989; SOCKS 127.0.0.1:8989";
   var DEFAULT = "DIRECT";
 
   if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
