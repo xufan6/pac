@@ -372,6 +372,7 @@ function FindProxyForURL(url, host) {
 "sanguosha.com",
 "sdo.com",
 "shanbay.com",
+"shuiku.net",
 "sina.com",
 "sina.com.cn",
 "sinaapp.com",
