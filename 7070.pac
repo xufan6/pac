@@ -455,6 +455,7 @@ function FindProxyForURL(url, host) {
 "vanclimg.com",
 "vcimg.com",
 "verycd.com",
+"veryzhun.com",
 "wandoujia.com",
 "wdjimg.com",
 "wechat.com",
