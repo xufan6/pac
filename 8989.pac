@@ -291,6 +291,7 @@ function FindProxyForURL(url, host) {
 "iciba.com",
 "icson.com",
 "idqqimg.com",
+"iesdouyin.com",
 "ifeng.com",
 "ifengimg.com",
 "ijinshan.com",
