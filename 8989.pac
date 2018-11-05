@@ -93,6 +93,8 @@ function FindProxyForURL(url, host) {
 "atpanel.com",
 "cainiao-inc.com",
 "dingtalk.com",
+"ele.me",
+"elemecdn.com",
 "fliggy.com",
 "gaode.com",
 "juhuasuan.com",
