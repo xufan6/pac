@@ -242,6 +242,7 @@ function FindProxyForURL(url, host) {
 "dospy.com",
 "dou.bz",
 "douban.com",
+"doubanio.com",
 "douban.fm",
 "douyin.com",
 "dpfile.com",
