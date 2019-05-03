@@ -390,6 +390,7 @@ function FindProxyForURL(url, host) {
 "qq.com",
 "qqmail.com",
 "qstatic.com",
+"quickconnect.to",
 "qunar.com",
 "qunarzz.com",
 "quwan.com",
