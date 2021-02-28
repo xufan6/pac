@@ -403,6 +403,7 @@ function FindProxyForURL(url, host) {
 "sanguosha.com",
 "sdo.com",
 "shanbay.com",
+"shmetro.com",
 "shuiku.net",
 "sina.com",
 "sina.com.cn",
