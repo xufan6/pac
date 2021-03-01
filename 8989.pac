@@ -115,6 +115,8 @@ function FindProxyForURL(url, host) {
 "yunos-inc.com",
 "zmxy-corp.com.cn",
 "ssssp.net",
+"ssssp.tk",
+"hhhhh.win",
 "xufan6.com",
 "crhan.com",
 "minyo.us",
