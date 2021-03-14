@@ -104,6 +104,7 @@ function FindProxyForURL(url, host) {
 "mayibank.net",
 "mmstat.com",
 "mybank-corp.cn",
+"nlark.com",
 "tanx.com",
 "taobao.com",
 "taobao.net",
