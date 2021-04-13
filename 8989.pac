@@ -96,6 +96,7 @@ function FindProxyForURL(url, host) {
 "ele.me",
 "elemecdn.com",
 "fliggy.com",
+"fliggy.hk",
 "gaode.com",
 "juhuasuan.com",
 "kbcdn.com",
