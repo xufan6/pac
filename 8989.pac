@@ -68,6 +68,7 @@ function FindProxyForURL(url, host) {
 "alibaba.com",
 "alibaba.net",
 "alibabacorp.com",
+"alibabacloud.com",
 "alicdn.com",
 "aliexpress.com",
 "aliimg.com",
