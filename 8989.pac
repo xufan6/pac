@@ -117,6 +117,7 @@ function FindProxyForURL(url, host) {
 "tmall.com",
 "tmall.net",
 "yunos-inc.com",
+"yuque.com",
 "zmxy-corp.com.cn",
 "ssssp.net",
 "ssssp.tk",
