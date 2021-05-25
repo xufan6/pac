@@ -458,6 +458,7 @@ function FindProxyForURL(url, host) {
 "tiqcdn.com",
 "tmall.com",
 "tmcdn.net",
+"tmsf.com",
 "tom.com",
 "tomonline-inc.com",
 "tuan800.com",
