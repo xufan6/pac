@@ -351,6 +351,7 @@ function FindProxyForURL(url, host) {
 "lianjia.com",
 "lietou.com",
 "linezing.com",
+"ljcdn.com",
 "loli.mg",
 "loli.vg",
 "lvmama.com",
