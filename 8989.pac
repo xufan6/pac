@@ -341,6 +341,7 @@ function FindProxyForURL(url, host) {
 "ku6img.com",
 "kuaidi100.com",
 "kugou.com",
+"kujiale.com",
 "kuukie.com",
 "lashou.com",
 "letao.com",
