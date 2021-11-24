@@ -358,6 +358,7 @@ function FindProxyForURL(url, host) {
 "meituan.net",
 "meizu.com",
 "mi.com",
+"mi-img.com",
 "miaopai.com",
 "microsoft.com",
 "miui.com",
