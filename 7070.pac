@@ -80,6 +80,7 @@ function FindProxyForURL(url, host) {
 "antfin-inc.com",
 "antfinancial-corp.com",
 "antsdaq-corp.com",
+"apsaraun.com",
 "atatech.org",
 "atpanel.com",
 "cainiao-inc.com",
