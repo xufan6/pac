@@ -466,6 +466,7 @@ function FindProxyForURL(url, host) {
 "tudouui.com",
 "tuitui.info",
 "tuniu.com",
+"tuya.com",
 "u148.net",
 "u17.com",
 "ubuntu.com",
