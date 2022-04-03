@@ -282,6 +282,7 @@ function FindProxyForURL(url, host) {
 "hichina.com",
 "hiwifi.com",
 "histatic.com",
+"hnair.com",
 "homeinns.com",
 "hoopchina.com",
 "huaban.com",
