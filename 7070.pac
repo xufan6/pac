@@ -451,6 +451,7 @@ function FindProxyForURL(url, host) {
 "tgbus.com",
 "thawte.com",
 "tiancity.com",
+"tianyancha.com",
 "tianyaui.com",
 "tiexue.net",
 "tingyun.com",
