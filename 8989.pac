@@ -278,6 +278,7 @@ function FindProxyForURL(url, host) {
 "guao.hk",
 "hao123.com",
 "hashnest.com",
+"hassbian.com",
 "hc360.com",
 "hdslb.com",
 "hiapk.com",
