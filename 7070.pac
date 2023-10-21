@@ -182,6 +182,7 @@ function FindProxyForURL(url, host) {
 "appinn.com",
 "apple.com",
 "appsina.com",
+"aqara.com",
 "archlinuxcn.org",
 "atpanel.com",
 "baidu.com",
