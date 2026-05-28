@@ -513,6 +513,7 @@ function FindProxyForURL(url, host) {
 "xiami.net",
 "xiaohongshu.com",
 "xiaomi.com",
+"xiaomimimo.com",
 "xiaonei.com",
 "xiazaiba.com",
 "xici.net",
