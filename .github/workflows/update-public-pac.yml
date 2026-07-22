@@ -68,7 +68,7 @@ jobs:
           publish_branch() {
             branch="$1"
             worktree="$RUNNER_TEMP/pac-$branch"
-            shift 2
+            shift
             targets=()
 
             git worktree add --detach "$worktree" "origin/$branch"
