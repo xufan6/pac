@@ -1,14 +1,9 @@
 name: Update public PAC files
 
 "on":
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
   schedule:
-    # 03:43 Asia/Shanghai on the following calendar day. GitHub cron uses UTC.
-    - cron: "43 19 * * *"
-  workflow_dispatch:
+    # Once daily. GitHub's scheduler is intentionally treated as a cadence, not an exact-time SLA.
+    - cron: "17 3 * * *"
 
 permissions:
   contents: read
@@ -25,12 +20,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: "11.9.0"
+      - name: Install JavaScript minifier
+        run: pnpm install --frozen-lockfile
       - name: Run generator tests
         run: python -m unittest discover -s tests -v
+      - name: Run PAC minifier tests
+        run: pnpm run test:minify
 
   publish:
     needs: test
-    if: github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -44,8 +48,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: "11.9.0"
+      - name: Install JavaScript minifier
+        run: pnpm install --frozen-lockfile
       - name: Generate public PAC artifacts
         run: python scripts/generate_pac.py --template templates/white.pac --out-dir generated
+      - name: Create compressed PAC aliases
+        run: pnpm run minify:pac -- --out-dir generated
       - name: Validate generated PAC behavior
         run: |
           node scripts/validate_pac.mjs \
@@ -98,6 +109,7 @@ jobs:
             generated/generic/7070.pac 7070.pac
 
           publish_branch devip \
+            generated/cn.lst cn.lst \
             generated/ip/8989.pac 8989.pac \
             generated/ip/7070.pac 7070.pac \
             generated/ip/m.8989.pac m.8989.pac \

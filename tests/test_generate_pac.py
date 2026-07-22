@@ -31,7 +31,7 @@ class GeneratePacTests(unittest.TestCase):
         self.assertEqual(cidrs[0], "1.0.0.0/24")
         self.assertEqual(cidrs[-1], "1.3.232.0/24")
 
-    def test_generate_preserves_legacy_aliases_as_valid_pac(self) -> None:
+    def test_generate_emits_unminified_pac_sources(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
             output_dir = Path(temporary_directory)
             generate(
@@ -49,14 +49,8 @@ class GeneratePacTests(unittest.TestCase):
             self.assertIn("FindProxyForURL", ip_8989)
             self.assertIn('"1.0.0.0/24"', ip_8989)
             self.assertIn("127.0.0.1:7070", ip_7070)
-            self.assertEqual(
-                ip_8989,
-                (output_dir / "ip/m.8989.pac").read_text(),
-            )
-            self.assertEqual(
-                ip_7070,
-                (output_dir / "ip/m.7070.pac").read_text(),
-            )
+            self.assertFalse((output_dir / "ip/m.8989.pac").exists())
+            self.assertFalse((output_dir / "ip/m.7070.pac").exists())
 
 
 if __name__ == "__main__":

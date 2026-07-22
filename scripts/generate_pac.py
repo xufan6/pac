@@ -236,9 +236,6 @@ def generate(
         "generic/7070.pac": generic_7070,
         "ip/8989.pac": ip_pac,
         "ip/7070.pac": ip_7070,
-        # Preserve the legacy URL surface without the retired external compiler.
-        "ip/m.8989.pac": ip_pac,
-        "ip/m.7070.pac": ip_7070,
     }
     for label, text in outputs.items():
         if label.endswith(".pac"):

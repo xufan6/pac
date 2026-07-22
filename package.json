@@ -1,0 +1,13 @@
+{
+  "name": "public-pac-generator",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "minify:pac": "node scripts/minify_pac.mjs",
+    "test:minify": "node --test tests/test_minify_pac.mjs"
+  },
+  "devDependencies": {
+    "terser": "5.49.0"
+  }
+}
