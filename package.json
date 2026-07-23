@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "packageManager": "pnpm@11.9.0",
   "scripts": {
-    "minify:pac": "node scripts/minify_pac.mjs",
+    "minify:pac": "node scripts/minify_pac.mjs --out-dir generated",
     "test:minify": "node --test tests/test_minify_pac.mjs"
   },
   "devDependencies": {

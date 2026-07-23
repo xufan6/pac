@@ -14,7 +14,7 @@
 ```bash
 pnpm install --frozen-lockfile
 python3 scripts/generate_pac.py --template templates/white.pac --out-dir generated
-pnpm run minify:pac -- --out-dir generated
+pnpm run minify:pac
 python3 -m unittest discover -s tests -v
 pnpm run test:minify
 ```

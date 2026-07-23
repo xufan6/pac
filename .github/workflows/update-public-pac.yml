@@ -56,7 +56,7 @@ jobs:
       - name: Generate public PAC artifacts
         run: python scripts/generate_pac.py --template templates/white.pac --out-dir generated
       - name: Create compressed PAC aliases
-        run: pnpm run minify:pac -- --out-dir generated
+        run: pnpm run minify:pac
       - name: Validate generated PAC behavior
         run: |
           node scripts/validate_pac.mjs \
