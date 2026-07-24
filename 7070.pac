@@ -1,52 +1,53 @@
-function FindProxyForURL(url, host) {
-  var PROXY = "SOCKS5 127.0.0.1:7070; SOCKS 127.0.0.1:7070";
-  var DEFAULT = "DIRECT";
+var PROXY = "SOCKS5 127.0.0.1:7070; SOCKS 127.0.0.1:7070";
+var DEFAULT = "DIRECT";
 
-  if (isInNet(host, "192.168.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "10.0.0.0", "255.0.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "11.0.0.0", "255.0.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "30.0.0.0", "255.0.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "172.16.0.0", "255.240.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "100.64.0.0", "255.192.0.0")) {return DEFAULT ;}
-  if (isPlainHostName(host) || (host == "localhost") || (host == "127.0.0.1") ) {return DEFAULT ;}
-  if (isInNet(host, "210.32.200.0", "255.255.240.0")) {return DEFAULT ;}
+// PAC engines call FindProxyForURL for each request. Keep static data global,
+// match domains before DNS, and pass only IPv4 literals to isInNet.
+var directIpNetworks = [
+  ["192.168.0.0", "255.255.0.0"],
+  ["10.0.0.0", "255.0.0.0"],
+  ["11.0.0.0", "255.0.0.0"],
+  ["30.0.0.0", "255.0.0.0"],
+  ["172.16.0.0", "255.240.0.0"],
+  ["100.64.0.0", "255.192.0.0"],
+  ["210.32.200.0", "255.255.240.0"],
+  ["42.120.0.0", "255.254.0.0"],
+  ["42.156.0.0", "255.255.0.0"],
+  ["42.96.253.0", "255.255.255.0"],
+  ["47.100.0.0", "255.252.0.0"],
+  ["110.75.0.0", "255.255.0.0"],
+  ["110.76.0.0", "255.255.224.0"],
+  ["110.76.49.0", "255.255.255.0"],
+  ["112.124.132.0", "255.255.252.0"],
+  ["112.124.136.0", "255.255.248.0"],
+  ["112.125.31.0", "255.255.255.0"],
+  ["112.126.126.0", "255.255.254.0"],
+  ["114.80.184.0", "255.255.255.0"],
+  ["115.28.122.0", "255.255.255.0"],
+  ["115.28.126.0", "255.255.255.240"],
+  ["115.29.1.0", "255.255.255.0"],
+  ["115.124.16.0", "255.255.252.0"],
+  ["119.30.208.0", "255.255.240.0"],
+  ["119.38.208.0", "255.255.240.0"],
+  ["119.42.224.0", "255.255.240.0"],
+  ["119.145.148.0", "255.255.255.0"],
+  ["120.25.111.0", "255.255.255.0"],
+  ["121.0.16.0", "255.255.240.0"],
+  ["121.40.0.0", "255.252.0.0"],
+  ["121.196.131.0", "255.255.255.0"],
+  ["122.224.0.0", "255.240.0.0"],
+  ["122.240.0.0", "255.248.0.0"],
+  ["122.70.187.0", "255.255.255.0"],
+  ["140.205.0.0", "255.255.0.0"],
+  ["182.92.17.0", "255.255.255.224"],
+  ["182.92.246.0", "255.255.255.0"],
+  ["198.11.140.0", "255.255.255.0"],
+  ["202.102.0.0", "255.255.128.0"],
+  ["205.204.0.0", "255.255.0.0"],
+  ["223.4.0.0", "255.254.0.0"]
+];
 
-  if (isInNet(host, "42.120.0.0", "255.254.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "42.156.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "42.96.253.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "47.100.0.0", "255.252.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "110.75.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "110.76.0.0", "255.255.224.0")) {return DEFAULT ;}
-  if (isInNet(host, "110.76.49.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "112.124.132.0", "255.255.252.0")) {return DEFAULT ;}
-  if (isInNet(host, "112.124.136.0", "255.255.248.0")) {return DEFAULT ;}
-  if (isInNet(host, "112.125.31.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "112.126.126.0", "255.255.254.0")) {return DEFAULT ;}
-  if (isInNet(host, "114.80.184.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "115.28.122.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "115.28.126.0", "255.255.255.240")) {return DEFAULT ;}
-  if (isInNet(host, "115.29.1.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "115.124.16.0", "255.255.252.0")) {return DEFAULT ;}
-  if (isInNet(host, "119.30.208.0", "255.255.240.0")) {return DEFAULT ;}
-  if (isInNet(host, "119.38.208.0", "255.255.240.0")) {return DEFAULT ;}
-  if (isInNet(host, "119.42.224.0", "255.255.240.0")) {return DEFAULT ;}
-  if (isInNet(host, "119.145.148.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "120.25.111.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "121.0.16.0", "255.255.240.0")) {return DEFAULT ;}
-  if (isInNet(host, "121.40.0.0", "255.252.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "121.196.131.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "122.224.0.0", "255.240.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "122.240.0.0", "255.248.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "122.70.187.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "140.205.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "182.92.17.0", "255.255.255.224")) {return DEFAULT ;}
-  if (isInNet(host, "182.92.246.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "198.11.140.0", "255.255.255.0")) {return DEFAULT ;}
-  if (isInNet(host, "202.102.0.0", "255.255.128.0")) {return DEFAULT ;}
-  if (isInNet(host, "205.204.0.0", "255.255.0.0")) {return DEFAULT ;}
-  if (isInNet(host, "223.4.0.0", "255.254.0.0")) {return DEFAULT ;}
-
-  var safeDomains = [
+var safeDomainNames = [
 "zjut.com",
 "zjut.edu.cn",
 "myzjut.org",
@@ -166,18 +167,7 @@ function FindProxyForURL(url, host) {
 "acfun.tv",
 "aixifan.com",
 "ali213.net",
-"alibaba.com",
-"alicdn.com",
-"aliexpress.com",
-"aliimg.com",
-"alikunlun.com",
-"alimama.com",
-"alipay.com",
-"alipayobjects.com",
-"alisoft.com",
-"aliyun.com",
 "aliyuncdn.com",
-"aliyuncs.com",
 "alphatown.com",
 "anzhi.com",
 "appinn.com",
@@ -185,7 +175,6 @@ function FindProxyForURL(url, host) {
 "appsina.com",
 "aqara.com",
 "archlinuxcn.org",
-"atpanel.com",
 "baidu.com",
 "baidupcs.com",
 "baidustatic.com",
@@ -452,9 +441,6 @@ function FindProxyForURL(url, host) {
 "suning.com",
 "swhz6.com",
 "szzfgjj.com",
-"tanx.com",
-"taobao.com",
-"taobaocdn.com",
 "tbcache.com",
 "tdimg.com",
 "tencent.com",
@@ -467,7 +453,6 @@ function FindProxyForURL(url, host) {
 "tiexue.net",
 "tingyun.com",
 "tiqcdn.com",
-"tmall.com",
 "tmcdn.net",
 "tmsf.com",
 "tom.com",
@@ -560,16 +545,54 @@ function FindProxyForURL(url, host) {
 "zjks.com",
 "zjyha.com",
 "zongheng.com"
-  ];
+];
 
-  function dnsDomainIs(host, pattern) {
-    return host.length >= pattern.length && (host === pattern || host.substring(host.length - pattern.length - 1) === '.' + pattern);
-  }
-  for (var i in safeDomains) {
-    if ( dnsDomainIs( host, safeDomains[i] ) ){
-      return DEFAULT;
-    }
-  }
+var safeDomainSuffixes = {};
+for (var safeDomainIndex = 0; safeDomainIndex < safeDomainNames.length; safeDomainIndex++) {
+  safeDomainSuffixes[safeDomainNames[safeDomainIndex]] = 1;
+}
+safeDomainNames = null;
 
-  return PROXY ;
+function isIPv4Literal(host) {
+  var octets = host.split(".");
+  if (octets.length !== 4) return false;
+  for (var octetIndex = 0; octetIndex < octets.length; octetIndex++) {
+    if (!/^\d+$/.test(octets[octetIndex])) return false;
+    var octet = parseInt(octets[octetIndex], 10);
+    if (octet < 0 || octet > 255) return false;
+  }
+  return true;
+}
+
+function isSafeDomain(host) {
+  var suffix = host;
+  while (true) {
+    if (safeDomainSuffixes[suffix] === 1) return true;
+    var dotIndex = suffix.indexOf(".");
+    if (dotIndex === -1) return false;
+    suffix = suffix.substring(dotIndex + 1);
+  }
+}
+
+function isDirectIp(ipAddress) {
+  for (var networkIndex = 0; networkIndex < directIpNetworks.length; networkIndex++) {
+    var network = directIpNetworks[networkIndex];
+    if (isInNet(ipAddress, network[0], network[1])) return true;
+  }
+  return false;
+}
+
+function FindProxyForURL(url, host) {
+  host = host.toLowerCase();
+
+  if (isPlainHostName(host) || host === "localhost" || host === "127.0.0.1") {
+    return DEFAULT;
+  }
+  if (isSafeDomain(host)) return DEFAULT;
+
+  var ipAddress = isIPv4Literal(host) ? host : dnsResolve(host);
+  if (ipAddress && isIPv4Literal(ipAddress) && isDirectIp(ipAddress)) {
+    return DEFAULT;
+  }
+  return PROXY;
 }
