@@ -5,7 +5,8 @@
   "packageManager": "pnpm@11.9.0",
   "scripts": {
     "minify:pac": "node scripts/minify_pac.mjs --out-dir generated",
-    "test:minify": "node --test tests/test_minify_pac.mjs"
+    "test:minify": "node --test tests/test_minify_pac.mjs",
+    "test:white-pac": "node --test tests/test_white_pac.mjs"
   },
   "devDependencies": {
     "terser": "5.49.0"

@@ -17,9 +17,10 @@ python3 scripts/generate_pac.py --template templates/white.pac --out-dir generat
 pnpm run minify:pac
 python3 -m unittest discover -s tests -v
 pnpm run test:minify
+pnpm run test:white-pac
 ```
 
-生成器在写出文件前会校验 APNIC 数据、CIDR 数量和 PAC 必要函数。GitHub Actions 仅按每日计划运行；这是每日频率保证，不依赖精确触发时点。成功后它会更新 `dev` / `devip`，且仅在内容实际变化时创建发布提交。
+生成器在写出文件前会校验 APNIC 数据、CIDR 数量和 PAC 必要函数；通用模板测试会覆盖域名后缀、IP 段和 DNS 调用路径。GitHub Actions 仅按每日计划运行；这是每日频率保证，不依赖精确触发时点。成功后它会更新 `dev` / `devip`，且仅在内容实际变化时创建发布提交。
 
 ## tinykvm 同步
 

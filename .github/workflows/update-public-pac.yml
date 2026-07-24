@@ -32,6 +32,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Run PAC minifier tests
         run: pnpm run test:minify
+      - name: Run generic PAC template tests
+        run: pnpm run test:white-pac
 
   publish:
     needs: test
