@@ -2,8 +2,8 @@ name: Update public PAC files
 
 "on":
   schedule:
-    # Once daily. GitHub's scheduler is intentionally treated as a cadence, not an exact-time SLA.
-    - cron: "17 3 * * *"
+    # Every 30 minutes. GitHub's scheduler is intentionally treated as a cadence, not an exact-time SLA.
+    - cron: "7,37 * * * *"
 
 permissions:
   contents: read
